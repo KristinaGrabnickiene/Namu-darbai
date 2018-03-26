@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boxing</title>
+        <style>
+            body {max-width: 100vw; font-size: 100%}
+          
+            .container {            
+                max-width: 100vw;
+                height: 62vh;
+                background-color: lightblue;}
+
+            .container .block {margin-top: 1rem;} 
+            
+            .block { 
+                width: 25vw;
+                height: 25vh;
+                font-size: 2.5em;
+   				text-align: right;
+   				background-color: blue;}
+                           
+           .strocked {
+            border: 5px solid black;            
+            margin-top: 3rem;}
+
+            .rectangle {    
+            margin-top: 2rem;
+            width :60vw;
+            height: 25vh;
+            background-color: yellow;
+            border: none;
+            text-align: right; }
+            
+             .rectangle > .block {background-color: red; }
+            
+            .strocked + .rectangle {background-color: violet; }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="block"> Block</div>
+            <div class="block"> Block</div>
+        </div>
+        <div class="block strocked">block</div>
+        <div class="rectangle">
+            <div class="block"> block</div>
+        </div>
+        <div class="rectangle strocked">BLOCK</div>
+    </body>
+</html>

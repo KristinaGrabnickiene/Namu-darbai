@@ -1,90 +1,174 @@
 <html>
-	<style>
+<meta charset="UTF-8"> </meta>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    overflow: hidden;
+  }
 
-body { 
-  padding: 0;
-  margin: 0;
-  font-size: 2em;
-  overflow: hidden;
- }
+  #blokas {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-#blokas {width: 100vw;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;}
+  .virsus,
+  .apacia {
+    flex: 0 0 15%;
+  }
 
-.virsus, .apacia {flex: 0 0 15%;}
-.centras {flex: 1;}
+  .centras {
+    flex: 1;
+  }
 
-.virsus, .centras, .apacia {display: flex;
-flex-direction: row;
-justify-content: center;}
+  .virsus,
+  .centras,
+  .apacia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-.b {flex: 0 0 25%;}
-.a {flex: 1;}
-.c {flex: 0 0 25%}
-.centro-sonas {flex: 0 0 25%}
-.centro-vidurys {flex: 1;}
+  .b {
+    flex: 0 0 25%;
+  }
 
-.centro-vidurys, .centro-sonas {display: flex;
-flex-direction: column; }
-.d, .e {flex: 0 0 15%;}
-.f, .h {flex: 1;}
-.g {flex: 0 0 32%;}
+  .a {
+    flex: 1;
+  }
 
-.a, .b {background: green;}
-.c {background: yellow;}
-.centro-vidurys {background: blue;}
-.centro-sonas {background: red;}
-.i {background: lightblue; flex:1;}
-.baltas {background: white; flex: 0 0 1%;}
-.baltas1 {background: white; flex: 0 0 2%;}
+  .c {
+    flex: 0 0 25%
+  }
+
+  .centro-sonas {
+    flex: 0 0 25%
+  }
+
+  .centro-vidurys {
+    flex: 1;
+  }
+
+  .centro-vidurys,
+  .centro-sonas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d,
+  .e {
+    flex: 0 0 15%;
+  }
+
+  .f,
+  .h {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .g {
+    flex: 0 0 32%;
+  }
+
+  .a,
+  .b {
+    background: green;
+  }
+
+  .c {
+    background: yellow;
+    overflow: hidden;
+  }
+
+  .centro-vidurys {
+    background: blue;
+  }
+
+  .centro-sonas {
+    background: red;
+  }
+
+  .i {
+    background: lightblue;
+    flex: 1;
+  }
+
+  .baltas {
+    background: white;
+    flex: 0 0 1%;
+  }
+
+  .baltas1 {
+    background: white;
+    flex: 0 0 2%;
+  }
+</style>
 
 
-
-	
-	</style>
-	
-	
 <div id="blokas">
-<div class="baltas1"></div>
-<div class="virsus">
-<div class="baltas"></div>
-  <div class="a">A</div>
-  <div class="baltas"></div>
-  <div class="b">B</div>
-  <div class="baltas"></div>
-</div>
-<div class="baltas1"></div>
-<div class="centras">
-<div class="baltas"></div>
-  <div class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, velit ac rutrum cursus, neque nisl vehicula ipsum, sed suscipit nisl odio fringilla ante. Aenean sagittis velit ut dui lobortis, at lobortis turpis imperdiet. Nunc tincidunt, velit at tincidunt imperdiet, ipsum ante lobortis dui, vitae tristique nunc purus nec leo. Donec non tellus dolor. Proin tellus nulla, convallis at ipsum eu, hendrerit mollis nisl. Etiam iaculis tempus sodales. Fusce suscipit accumsan leo, quis placerat libero. Morbi eget luctus lacus, id suscipit magna. Curabitur id ipsum in risus fringilla imperdiet. Duis non facilisis odio, a vulputate lorem. Ut posuere sollicitudin libero in dapibus. Integer pharetra tempor ornare. Integer varius est est, id cursus dolor interdum nec. Nullam id lorem nec augue ultricies vestibulum.</div>
-  <div class="baltas"></div>
-  <div class="centro-vidurys">
-    <div class="d">D</div>
-    <div class="baltas1"></div>
-    <div class="e">E</div>
-    <div class="baltas1"></div>
-    <div class="f">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, velit ac rutrum cursus, neque nisl vehicula ipsum, sed suscipit nisl odio fringilla ante. Aenean sagittis velit ut dui lobortis, at lobortis turpis imperdiet. Nunc tincidunt, velit at tincidunt imperdiet, ipsum ante lobortis dui, vitae tristique nunc purus nec leo. Donec non tellus dolor. Proin tellus nulla, convallis at ipsum eu, hendrerit mollis nisl. Etiam iaculis tempus sodales. Fusce suscipit accumsan leo, quis placerat libero. Morbi eget luctus lacus, id suscipit magna. Curabitur id ipsum in risus fringilla imperdiet. Duis non facilisis odio, a vulputate lorem. Ut posuere sollicitudin libero in dapibus. Integer pharetra tempor ornare. Integer varius est est, id cursus dolor interdum nec. Nullam id lorem nec augue ultricies vestibulum.</div>
-  </div>
-  <div class="baltas"></div>
-  <div class="centro-sonas">
-  
-    <div class="g">G</div>
-    <div class="baltas1"></div>
-    <div class="h">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, velit ac rutrum cursus, neque nisl vehicula ipsum, sed suscipit nisl odio fringilla ante. Aenean sagittis velit ut dui lobortis, at lobortis turpis imperdiet. Nunc tincidunt, velit at tincidunt imperdiet, ipsum ante lobortis dui, vitae tristique nunc purus nec leo. Donec non tellus dolor. Proin tellus nulla, convallis at ipsum eu, hendrerit mollis nisl. Etiam iaculis tempus sodales. Fusce suscipit accumsan leo, quis placerat libero. Morbi eget luctus lacus, id suscipit magna. Curabitur id ipsum in risus fringilla imperdiet. Duis non facilisis odio, a vulputate lorem. Ut posuere sollicitudin libero in dapibus. Integer pharetra tempor ornare. Integer varius est est, id cursus dolor interdum nec. Nullam id lorem nec augue ultricies vestibulum.</div>
-    
-  </div>
-  <div class="baltas"></div>
+  <div class="baltas1"></div>
+  <div class="virsus">
+    <div class="baltas"></div>
+    <div class="a">A</div>
+    <div class="baltas"></div>
+    <div class="b">B</div>
+    <div class="baltas"></div>
   </div>
   <div class="baltas1"></div>
-<div class="apacia">
-  <div class="baltas"></div>
-  <div class="i">I</div> 
-	<div class="baltas"></div>
-</div>
-<div class="baltas1"></div>
+  <div class="centras">
+    <div class="baltas"></div>
+    <div class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, velit ac rutrum cursus, neque nisl vehicula
+      ipsum, sed suscipit nisl odio fringilla ante. Aenean sagittis velit ut dui lobortis, at lobortis turpis imperdiet.
+      Nunc tincidunt, velit at tincidunt imperdiet, ipsum ante lobortis dui, vitae tristique nunc purus nec leo. Donec non
+      tellus dolor. Proin tellus nulla, convallis at ipsum eu, hendrerit mollis nisl. Etiam iaculis tempus sodales. Fusce
+      suscipit accumsan leo, quis placerat libero. Morbi eget luctus lacus, id suscipit magna. Curabitur id ipsum in risus
+      fringilla imperdiet. Duis non facilisis odio, a vulputate lorem. Ut posuere sollicitudin libero in dapibus. Integer
+      pharetra tempor ornare. Integer varius est est, id cursus dolor interdum nec. Nullam id lorem nec augue ultricies vestibulum.</div>
+    <div class="baltas"></div>
+    <div class="centro-vidurys">
+      <div class="d">D</div>
+      <div class="baltas1"></div>
+      <div class="e">E</div>
+      <div class="baltas1"></div>
+      <div class="f">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, velit ac rutrum cursus, neque nisl vehicula
+        ipsum, sed suscipit nisl odio fringilla ante. Aenean sagittis velit ut dui lobortis, at lobortis turpis imperdiet.
+        Nunc tincidunt, velit at tincidunt imperdiet, ipsum ante lobortis dui, vitae tristique nunc purus nec leo. Donec
+        non tellus dolor. Proin tellus nulla, convallis at ipsum eu, hendrerit mollis nisl. Etiam iaculis tempus sodales.
+        Fusce suscipit accumsan leo, quis placerat libero. Morbi eget luctus lacus, id suscipit magna. Curabitur id ipsum
+        in risus fringilla imperdiet. Duis non facilisis odio, a vulputate lorem. Ut posuere sollicitudin libero in dapibus.
+        Integer pharetra tempor ornare. Integer varius est est, id cursus dolor interdum nec. Nullam id lorem nec augue ultricies
+        vestibulum.
+      </div>
+    </div>
+    <div class="baltas"></div>
+    <div class="centro-sonas">
+
+      <div class="g">G</div>
+      <div class="baltas1"></div>
+      <div class="h">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, velit ac rutrum cursus, neque nisl vehicula
+        ipsum, sed suscipit nisl odio fringilla ante. Aenean sagittis velit ut dui lobortis, at lobortis turpis imperdiet.
+        Nunc tincidunt, velit at tincidunt imperdiet, ipsum ante lobortis dui, vitae tristique nunc purus nec leo. Donec
+        non tellus dolor. Proin tellus nulla, convallis at ipsum eu, hendrerit mollis nisl. Etiam iaculis tempus sodales.
+        Fusce suscipit accumsan leo, quis placerat libero. Morbi eget luctus lacus, id suscipit magna. Curabitur id ipsum
+        in risus fringilla imperdiet. Duis non facilisis odio, a vulputate lorem. Ut posuere sollicitudin libero in dapibus.
+        Integer pharetra tempor ornare. Integer varius est est, id cursus dolor interdum nec. Nullam id lorem nec augue ultricies
+        vestibulum.
+      </div>
+
+    </div>
+    <div class="baltas"></div>
+  </div>
+  <div class="baltas1"></div>
+  <div class="apacia">
+    <div class="baltas"></div>
+    <div class="i">I</div>
+    <div class="baltas"></div>
+  </div>
+  <div class="baltas1"></div>
 </div>
 
 

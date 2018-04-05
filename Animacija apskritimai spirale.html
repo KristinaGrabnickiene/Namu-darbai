@@ -1,0 +1,87 @@
+<head>
+	<title></title>
+	<meta charset="UTF-8"> </meta>
+
+	<style>
+		body {
+			margin: 50px
+			font-size: 20px;
+			color: black;
+		}
+		.kvadratas {
+			background-color: lightgray;
+			max-width: 90vmin;
+			height: 90vmin;
+			border: 1px solid black;
+			margin: auto;
+			position: relative;
+		}
+		.circle {
+			font-size: 3em;
+			color: white;
+			width: calc(60% - 0.5em);
+			height: calc(60% - 0.5em);
+			border-radius: 50%;
+			display: table-cell;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			animation-duration: 4s;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(.12,1.33,.59,1.73);
+		}
+		.raide {
+			position: absolute;
+			top: 40%;
+			right: 0;
+			left: 0;
+			margin: auto;
+		}
+		.red {
+			background-color: #f44336a6;
+			border: 0.25em solid red;
+			;
+			animation-name: raudonas;
+		}
+		.blue {
+			background-color: #0000ff94;
+			border: 0.25em solid blue;
+			animation-name: melynas;
+		}
+		.green {
+			background-color: #00800087;
+			border: 0.25em solid green;
+			animation-name: zalias;
+		}
+		@keyframes raudonas {
+   			 100%  {top: -35%; } }
+				
+		@keyframes melynas {
+			 100%  {top: 35%; left: -35%; }  }
+        
+		@keyframes zalias {
+ 			100%  {top: 35%; left: 35%; }  }
+ 
+ 
+	
+	</style>
+
+</head>
+
+<div class="kvadratas">
+	<div class="circle green">
+		<div class="raide">G</div>
+	</div>
+	<div class="circle red">
+		<div class="raide">R</div>
+	</div>
+	<div class="circle blue">
+		<div class="raide">B</div>
+	</div>
+</div>
+</div>
+</html>

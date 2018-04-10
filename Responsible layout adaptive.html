@@ -1,0 +1,139 @@
+<html>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .fonas {
+        min-width: 100vw;
+        min-height: 100vh;
+        background: #FFE989;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin: 5px;
+    }
+    .meniu {
+        background-color: #18679A;
+        flex-grow: 0;
+        flex-shrink: 0;
+ 	     color: white;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        font-size: 2em;
+        padding: 0.5em;
+        margin: 5px;}
+        
+    .vidurys {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin: 5px;
+                   }
+            
+    .kontaktai {
+        background-color: #18679A;
+        flex-grow: 0;
+        flex-shrink: 0;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        color: white;
+        font-size: 2em;
+        padding: 0.5em;
+        margin: 5px;
+    }
+    
+    /* vidurys*/
+    .tekstas {
+        background-color: #4C8945;
+        flex: 1 0 80%;
+        color: white;
+    }
+    .reklama {
+        display: flex;
+        flex: row;
+        flex-wrap: wrap;
+        justify-content: space- evenly;
+        flex: 0 0 20%;
+        flex: auto;
+    }
+    .a {
+        background: #155359;
+        border: 1px solid;
+        flex: 0 0 50%;
+        margin: 10px;
+        width: 300px;
+        height: 80px;
+    }
+       /*buves meniu linkas*/ 
+   .active {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-left:0.5em;
+        }
+        
+	.noactive {
+		  flex-grow: 1;
+        flex-shrink: 0;
+       }
+       
+    @media screen and (max-width: 765px) {
+
+        .active:nth-child(2),
+        .active:nth-child(3){
+            display: none;
+        }
+        .fonas {
+            
+        }
+        .vidurys {
+        flex-direction: column;
+        flex-wrap: wrap;
+        }
+        .tekstas {
+            flex: 1 0 60%;
+        }
+        .reklama .a {
+            flex: 0 0 45%;
+        }
+    }
+</style>
+<div class="fonas">
+	<div class="meniu">
+    	<div class="active">Meniu</div>
+    	<div class="active">meniu2</div>
+    	<div class="active">meniu3</div>
+    	<div class="noactive"></div>
+		<div class="active">meniu4</div>		
+	
+	</div>
+   <div class="vidurys">
+        <div class="tekstas"> Mauris placerat eleifend leoPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+            quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leoPellentesque habitant morbi tristique
+            senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+            tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+            Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et
+            netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit
+            amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+            leo.
+       </div>
+        <div class="reklama">
+            <div class="a">reklama1</div>
+            <div class="a">reklama2</div>
+            <div class="a">reklama3</div>
+            <div class="a">reklama4</div>
+        </div>
+    </div>
+   <div class="kontaktai">Kontaktai</div>
+</div>
+
+
+</html>

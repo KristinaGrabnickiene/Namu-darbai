@@ -17,7 +17,7 @@
   var ilgis = 100, plotis = 350;
         var perimetras = 2 * (plotis + ilgis);
         var staciakampio_plotas = ilgis * plotis;
-        var istrizaine = (ilgis*2 + plotis*2)/ 2;
+        var istrizaine = Math.sqrt (ilgis*ilgis + plotis*ilgis);
       
 document.getElementById("perimetras").innerHTML = 'Kintamojo "Perimetras" reikšmė yra :' + perimetras;
 

@@ -1,0 +1,60 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   
+<script> 
+    var a = 4 ; b = 4; c = 6;
+    var p = (a + b + c)/ 2;
+    var plotas =  Math.sqrt (p*(p - a)*(p - c)*(p - b));
+   
+    
+
+</script>
+</head>
+<style>
+    #plotas, #a, #b, #c, p {color: brown; font-size: 20px; }
+</style>
+
+<body>
+        <p id="plotas"> Trikampio kraštinės </p>
+        <p id="a"> Kraštine a</p>
+        <p id="b"> Kraštine b</p>
+        <p id="c"> Kraštine c</p>
+
+        <p>Trikampio kraštinės</p>
+
+        <button onclick="myFunction()">Yra</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+
+             document.getElementById("plotas").innerHTML = ' Duoto trikampio plotas lygu: ' + plotas ;
+             document.getElementById("a").innerHTML = ' Duoto trikampio kraštinė A lygu: ' +  a;
+             document.getElementById("b").innerHTML = ' Duoto trikampio kraštinė B lygu: ' +  b;
+             document.getElementById("c").innerHTML = ' Duoto trikampio kraštinė C lygu: ' + c;
+
+        function myFunction() {
+            
+            var trikampis;
+            if (a == b && c) {
+                trikampis = "Lygiašonis";
+            } else if (a === b || b === c || a === c); {
+                trikampis = "Lygiakraštis";
+             } if (a != b && c) {
+                trikampis = "Įvairiakraštis";
+            }
+            document.getElementById("demo").innerHTML = trikampis;
+        }
+        </script>
+
+
+</body>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,10 +8,29 @@
    
    
 <script> 
-    var a = 4 ; b = 4; c = 6;
+    var a = 3 ; b = 4 ; c = 5;
     var p = (a + b + c)/ 2;
     var plotas =  Math.sqrt (p*(p - a)*(p - c)*(p - b));
    
+    var trikampis;
+            if (plotas>0) {
+                if  (a === b && b === c ){ 
+                    trikampis = "lygiakraštis";
+                    } else if ( a === b || a === c || c === b ){
+                    trikampis = "lygiašonis"; 
+                    if ( a*a === b*b + c*c || b*b === a*a + c*c || c*c === a*a + b*b ) {
+                        trikampis += " statusis";
+                    };
+                } else { 
+                    trikampis = "įvairiakraštis";
+                    if ( a*a === b*b + c*c || b*b === a*a + c*c || c*c === a*a + b*b ) {
+                        trikampis += " statusis";
+                    };
+                };
+            } else { 
+                trikampis = "neegzistuoja";
+            };
+
     
 
 </script>
@@ -21,15 +40,11 @@
 </style>
 
 <body>
-        <p id="plotas"> Trikampio kraštinės </p>
+        
         <p id="a"> Kraštine a</p>
         <p id="b"> Kraštine b</p>
         <p id="c"> Kraštine c</p>
-
-        <p>Trikampio kraštinės</p>
-
-        <button onclick="myFunction()">Yra</button>
-        
+        <p id="plotas"> Trikampio plotas </p>
         <p id="demo"></p>
         
         <script>
@@ -38,19 +53,8 @@
              document.getElementById("a").innerHTML = ' Duoto trikampio kraštinė A lygu: ' +  a;
              document.getElementById("b").innerHTML = ' Duoto trikampio kraštinė B lygu: ' +  b;
              document.getElementById("c").innerHTML = ' Duoto trikampio kraštinė C lygu: ' + c;
+             document.getElementById("demo").innerHTML = 'Duotas trikampis ' + trikampis;
 
-        function myFunction() {
-            
-            var trikampis;
-            if (a == b && c) {
-                trikampis = "Lygiašonis";
-            } else if (a === b || b === c || a === c); {
-                trikampis = "Lygiakraštis";
-             } if (a != b && c) {
-                trikampis = "Įvairiakraštis";
-            }
-            document.getElementById("demo").innerHTML = trikampis;
-        }
         </script>
 
 

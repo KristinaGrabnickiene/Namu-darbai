@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Stačiakampio parametrai </h2>
+<p> Kai ilgis: 100cm, o plotis : 350cm </p>
+
+
+<p id="perimetras"> Perimetras</p>
+<p id="plotas"> Plotas</p>
+<p id="istrizaine"> Istrižainė</p>
+
+
+
+
+<script>
+  var ilgis = 100, plotis = 350;
+        var perimetras = 2 * (plotis + ilgis);
+        var staciakampio_plotas = ilgis * plotis;
+        var istrizaine = Math.sqrt (ilgis*ilgis + plotis*ilgis);
+      
+document.getElementById("perimetras").innerHTML = 'Kintamojo "Perimetras" reikšmė yra :' + perimetras;
+
+document.getElementById("plotas").innerHTML = 'Kintamojo "Plotas" reikšmė yra: ' + staciakampio_plotas;
+
+document.getElementById("istrizaine").innerHTML = 'Kintamojo "įstrižainė" reikšmė yra: ' + istrizaine;
+
+
+</script>
+
+<p> <strong> Parodyti mygtuko pagalba </strong> </p>
+<button type="button" onclick="document.write(perimetras)">Paskaičiuoti perimetra</button>
+<button type="button" onclick="document.write(staciakampio_plotas)">Paskaičiuoti bendrą plotą</button>
+<button type="button" onclick="document.write(istrizaine)">Paskaičiuoti bendrą įstrižainę</button>
+
+
+</body>
+</html> 

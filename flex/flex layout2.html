@@ -1,0 +1,118 @@
+<html>
+<meta charset="UTF-8"> </meta>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    overflow: auto;
+  }
+
+  #blokas {
+    width: 100vw;
+    height: 100vh;
+
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+   -webkit-justify-content: space-around;
+  justify-content: space-around;
+  }
+
+  .virsus, .apacia { flex: 0 0 15%;  }
+
+  .centras { flex: 1;  }
+
+  .virsus, .centras, .apacia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  }
+
+  .b {flex: 0 0 25%;}
+  .a {flex: 1;}
+  .c {flex: 0 0 25%;}
+
+  .centro-sonas {flex: 0 0 25%;}
+  .centro-vidurys { flex: 1;}
+
+  .centro-vidurys, .centro-sonas { display: flex;
+    flex-direction: column;   }
+
+  .d, .e { flex: 0 0 15%; }
+
+  .f, .h { flex: 1;
+    overflow: hidden;  }
+
+  .g { flex: 0 0 32%; }
+
+  .a,  .b { background: green;  }
+
+  .c {  background: yellow;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;  }
+
+  .centro-vidurys {  background: blue;  }
+
+  .centro-sonas {  background: red;  }
+
+  .i {  background: lightblue;  flex: 1;  }
+
+  .baltas { background: white; flex: 0 0 1%; }
+
+  .baltas1 { background: white; flex: 0 0 2%;  }
+  .a, .b, .c, .d, .e, .f, .i, .g, .h { border: 4px solid white;}
+  
+</style>
+
+
+<div id="blokas">
+
+  <div class="virsus">
+
+    <div class="a">A</div>
+    <div class="b">B</div>
+
+  </div>
+
+  <div class="centras">
+
+    <div class="c">C</div>
+
+    <div class="centro-vidurys">
+     	 <div class="d">D</div>
+     	 <div class="e">E</div>
+     	 <div class="f">F</div>
+    </div>
+   <div class="centro-sonas">
+
+    <div class="g">G</div>
+    <div class="h">H</div>
+
+  </div>
+
+</div>
+
+<div class="apacia">
+
+  <div class="i">I</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+</html>

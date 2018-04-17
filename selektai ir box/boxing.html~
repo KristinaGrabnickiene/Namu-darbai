@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boxing</title>
+        <style>
+            body {width: 100%;}
+           .block { 
+                width: 5%;
+   				padding: 25%;
+   				text-align: right;
+   				background-color: blue;}
+                
+           .container {            
+            width :100%;
+            padding 10%;
+            background-color: lightblue;}
+            .container .block {margin-top: 1rem;}
+           
+           .strocked {
+            border: 5px solid black;
+            margin-top: 3rem;}
+
+            .rectangle {    
+            margin-top: 1rem;
+            width :70%;
+            padding: 10%;
+            background-color: violet;}
+            
+            .rectangle > .block {background-color: red;}
+            
+            .strocked + .rectangle {bachground-color: yellow; border: 0px; }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="block"> Block</div>
+            <div class="block"> Block</div>
+        </div>
+        <div class="block strocked">block</div>
+        <div class="rectangle">
+            <div class="block"> block</div>
+        </div>
+        <div class="rectangle strocked">BLOCK</div>
+    </body>
+</html>

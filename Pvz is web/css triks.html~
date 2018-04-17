@@ -1,0 +1,26 @@
+<html>
+<style>
+
+$r: 2em;
+
+.box {
+    position: relative;
+  outline: solid 3px #000;
+  max-width: 15em;
+  min-height: 10em;
+    
+    &:before {
+    position: absolute;
+        padding: $r;
+    box-shadow: 0 0 7px #b53;
+    background: #f90;
+    content: '';
+  }
+}
+
+</style>
+
+<div class="box">
+	</div>
+
+</html>

@@ -1,0 +1,53 @@
+<!--_<radial-gradient> = radial-gradient(
+  [ [ <shape> || <size> ] [ at <position> ]? , |
+    at <position>, 
+  ]?
+  <color-stop> [ , <color-stop> ]+
+)
+-->
+
+<html> 
+<style>
+.pirmas {
+  height: 100px;
+  background-color: red;
+  background-image:
+    radial-gradient(
+      yellow,
+      #f06d06
+    );
+    }
+.antras {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  background-image:
+    radial-gradient(
+      circle at top right,
+      yellow,
+      #f06d06 50%
+    );
+}
+.trecias { height:100px;
+background-color: blue;
+background-image: 
+radial-gradient( 
+circle, 
+#6f82ec,
+     #870d9cbd );
+     }
+
+.ketvirtas {  height: 100px;
+  background: radial-gradient( ellipse, #9E9E9E,  #222931);}
+
+</style>
+
+
+<div class="pirmas"></div>
+ <div class="antras"></div>
+ <div class="trecias"></div>
+ <div class="ketvirtas"></div>
+  
+
+
+</html>

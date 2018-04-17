@@ -1,0 +1,106 @@
+<html>
+
+<style>
+
+
+
+body {
+margin: 0; } 
+ .fonas {
+background: #FFE989;  
+display: flex; 
+flex-direction: column;   
+color: white;}
+  
+ 
+ .tekstas {
+ background-color: #4C8945;
+ flex: 2 0 50%;   
+ color: white;}
+ 
+ .reklama {display: flex;
+flex: row;
+flex-wrap: wrap;
+justify-content: space- evenly;
+flex: 1 0 30% ;}
+
+
+.a {background: #155359;
+border: 1px solid ;
+flex: 0 0 200px;
+margin: 10px; 
+width: 300px; height: 80px; }
+
+
+.kontaktai {background-color: #18679A;
+ flex: 0 0 10%;
+ color: white;
+ text-decoration: none;
+  text-align: center;
+  display: block; 
+  color: white;
+  font-size: 2em;
+  padding: 0.5em;}
+
+
+.meniu {
+  list-style: none;
+  margin: 0;
+  background: #34A5DA;;
+  display: flex;
+  flex: 0 0 10%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.meniu .pirmas, .ketvirtas, .antras, .trecias {
+  text-decoration: none;
+  display: block; 
+  color: white;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+
+    
+    
+.pirmas:hover, .ketvirtas:hover, .antras:hover, .trecias:hover {
+  background: #00b7f5;}
+  
+
+ 
+@media screen and (max-width: 700px) {
+ 
+    .antras, .trecias { display: none;}
+     
+    .tekstas, .reklama {   
+        flex-direction: row;
+    }
+}
+}
+
+
+</style>
+
+<div class="fonas">
+ <div class="meniu">
+  <div class="pirmas">meniu</div>
+  <div class="antras">meniu2</div>
+  <div class="trecias">meniu3</div>
+  <div class="ketvirtas">meniu4</div>
+</div>
+
+
+  <div class="tekstas"> <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leoPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leoPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> </div>  
+  <div class="reklama">
+      <div class="a">reklama1</div>
+      <div class="a">reklama2</div>
+      <div class="a">reklama3</div>
+      <div class="a">reklama4</div>
+    </div>
+<div
+ class="kontaktai">Kontaktai</div>
+</div>
+
+
+</html>

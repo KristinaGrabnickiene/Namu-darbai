@@ -1,0 +1,143 @@
+<html>
+ <style> 
+ body {
+  margin: 0;
+  display: flex;
+}
+  
+.fonas {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(ellipse,  #9E9E9E,  #222931 );
+  display: flex;
+}
+.pirmas {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border: 1px dashed #888;
+  position: relative;
+  border-radius: 50%;
+  background-color: #384c50;
+  border: 1px solid rgb(18, 20, 20);
+  box-shadow: 0px 0px 32px 8px rgb(18, 20, 20), 0px 0px 4px 1px rgb(18, 20, 20) inset;
+}
+  
+  .ratas {
+  border-radius: 50%;}
+  
+  .centras {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;}
+  
+  .tunelis {
+  width: 220px;
+  height: 220px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 1px #52fefe, 0px 0px 5px 4px #52fefe inset;
+}
+
+  .ratukas-iterptas {
+  width: 180px;
+  height: 180px;
+  background-color: #073c4b;
+  box-shadow: 0px 0px 5px 4px #52fefe, 0px 0px 6px 2px #52fefe inset;
+}
+  
+  .ratukas-virs {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  box-shadow: 0px 0px 7px 5px #52fefe, 0px 0px 10px 10px #52fefe inset;}
+  
+  .ratukas{
+  width: 70px;
+  height: 70px;
+    border: 5px solid #1b4e5f;
+  background-color: #fff;
+  box-shadow: 0px 0px 7px 5px #52fefe, 0px 0px 10px 10px #52fefe inset;
+}
+  .detale {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: calc(50% - 110px);
+  left: calc(50% - 15px);
+  transform-origin: 15px 110px;
+  transform: rotate(45deg);
+  background-color: #073c4b;
+  box-shadow: 0px 0px 5px #52fefe inset;}
+  
+  .konteineris {position: relative;
+  width: 100%;
+  height: 100%;  
+  animation-name: animacija;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;}
+  
+  .tamsus {
+  height: 238px;
+  width: 238px;
+  background-color: rgb(22, 26, 27);;
+  box-shadow: 0px 0px 4px 1px #52fefe;
+}
+
+  	.pasukimas1 {
+  transform: rotate(0deg);}
+    .pasukimas2 {
+  transform: rotate(45deg);}
+    .pasukimas3 {
+  transform: rotate(90deg);}
+    .pasukimas4 {
+  transform: rotate(135deg);}
+    .pasukimas5 {
+  transform: rotate(180deg);}
+    .pasukimas6 {
+  transform: rotate(225deg);}
+    .pasukimas7 {
+  transform: rotate(270deg);}
+    .pasukimas8 {
+  transform: rotate(315deg);}
+
+@keyframes animacija {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+
+
+</style>
+
+
+
+<div class="fonas">
+	<div class="pirmas">
+		<div class="tamsus ratas centras"></div>
+	 <div class="tunelis ratas centras"></div>
+	 <div class="ratukas-iterptas ratas centras"></div>
+	 <div class="ratukas-virs ratas centras"></div>
+	 <div class="ratukas ratas centras"></div>
+	 	<div class="konteineris">
+	 		<div class="detale pasukimas1"></div>
+	      <div class="detale pasukimas2"></div>
+      	<div class="detale pasukimas3"></div>
+      	<div class="detale pasukimas4"></div>
+      	<div class="detale pasukimas5"></div>
+      	<div class="detale pasukimas6"></div>
+      	<div class="detale pasukimas7"></div>
+      	<div class="detale pasukimas8"></div>
+	 
+	 
+	 </div>
+	 
+	 	</div>
+	 	
+	</div>
+ 
+
+
+
+</html>

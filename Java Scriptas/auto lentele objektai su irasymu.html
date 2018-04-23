@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        Testai
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    thead {
+        font-size: 20px;
+        padding: 8px;
+        margin:2px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <table>
+        <thead>
+            <label>Data:</label>
+            <input id="data">
+            <label>Pavarde:</label>
+            <input id="pavarde">
+            <label>Numeris:</label>
+            <input id="numeris">
+            <label>Laikas:</label>
+            <input id="laikas">
+            <label>Atstumas:</label>
+            <input id="atstumas">
+            <button onclick="add()">Prideti</button>
+      
+       
+            <tr>
+                <th>Data</th>
+                <th>Pavardė</th>
+                <th>Auto Nr</th>
+                <th>Kilometrai</th>
+                <th>Valandos</th>
+                <th>Greitis km/h</th>
+            </tr>
+            <tr>
+                </thead>
+
+                    <tbody id="a">
+    
+        </tbody>
+    </table>
+
+    <script>
+        var auto = [
+            { 'data': '2015-01-25', 'pavarde': 'Jonaitis', 'numeris': 'DDA800', 'laikas': 500, 'atstumas': 5000 },
+            { 'data': '2014-02-03', 'pavarde': 'Petraitis', 'numeris': 'FGD55', 'laikas': 450, 'atstumas': 5000 },
+            { 'data': '2015-08-15', 'pavarde': 'Kaziukas', 'numeris': 'ABC553', 'laikas': 550, 'atstumas': 5000 },
+            { 'data': '2017-01-25', 'pavarde': 'Petriukas', 'numeris': 'CVF880', 'laikas': 500, 'atstumas': 5000 }
+        ];
+
+        lentele();
+
+        function lentele() {
+            var lentele = '';
+            auto.forEach(a => {
+                lentele +=
+                    '<tr>' +
+                    '<td>' + a.data + '</td>' +
+                    '<td>' + a.pavarde + '</td>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + a.atstumas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                    '</tr>';
+            });
+
+            document.getElementById('a').innerHTML = lentele;
+        }
+
+        function add() {
+            auto.push({
+                'data': document.querySelector('#data').value,
+                'pavarde': document.querySelector('#pavarde').value,
+                'numeris': document.querySelector('#numeris').value,
+                'laikas': document.querySelector('#laikas').value,
+                'atstumas': document.querySelector('#atstumas').value
+            });
+
+            lentele();
+
+            document.querySelector('#data').value = '';
+        }
+    </script>
+</body>
+
+</html>

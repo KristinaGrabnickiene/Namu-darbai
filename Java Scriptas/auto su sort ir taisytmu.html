@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    thead {font-size: 20px;}
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+</style>
+
+<body>
+    <label>Data:</label>
+    <input id="data">
+    <label>Numeris:</label>
+    <input id="numeris">
+    <label>Atstumas:</label>
+    <input id="atstumas">
+    <label>Laikas:</label>
+    <input id="laikas">
+    <button id="add" onclick="add()">Prideti</button><br>
+    <hr>
+    <table border="1">
+        <tr>
+            <td>
+                <div onclick="sort('data')">Data</div>
+            </td>
+            <td>
+                <div onclick="sort('numeris')">Numeris</div>
+            </td>
+            <td>
+                <div onclick="sort('atstumas')">Atstumas</div>
+            </td>
+            <td>
+                <div onclick="sort('laikas')">Laikas</div>
+            </td>
+            <td>Greitis</td>
+            <td>Veiksmai</td>
+            <td>Trinti</td>
+            <td>Saugoti</td>
+        </tr>
+        <tbody id="a"></tbody>
+    </table>
+
+    <script>
+        var auto = [
+            { 'data': '2018-04-01', 'pavarde': 'Petras', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110 },
+            { 'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100 },
+            { 'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105 },
+            { 'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111 }
+        ];
+
+        var sortOrder;
+        function sort(laukas) {
+            sortOrder = (a, b) => {
+                return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+            };
+            lentele();
+        }
+
+
+        lentele();
+
+        function lentele() {
+            var lentele = '';
+            sortOrder = sortOrder || sort('data');
+            auto.sort(sortOrder);
+            auto.forEach((a, i) => {
+                lentele +=
+                    '<tr>' +
+                    '<td>' + a.data + '</td>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.atstumas + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                    '<td><button onclick="trinti(' + i + ')">Trinti</button></td>'+
+                    '<td><button onclick="taisyti(' + i + ')">Taisyti</button></td>'+
+                    '<td><button  id="save" onclick="saugoti(' + i + ')">Saugoti</button></td>'
+                '</tr>';
+                
+            });
+            document.getElementById('a').innerHTML = lentele;
+            
+           
+        }
+
+        function add() {
+            auto.push({
+                'data': document.querySelector('#data').value,
+                'numeris': document.querySelector('#numeris').value,
+                'atstumas': document.querySelector('#atstumas').value,
+                'laikas': document.querySelector('#laikas').value
+            });
+
+            
+
+            document.querySelector('#data').value = '';
+            document.querySelector('#numeris').value = '';
+            document.querySelector('#atstumas').value = '';
+            document.querySelector('#laikas').value = '';
+
+            lentele();
+
+        }
+
+        function trinti(index) {
+            auto.splice(index, 1);
+            lentele();
+        }
+         
+        function taisyti(index) {
+            var taiso = auto[index]
+            document.querySelector("#data").value = taiso.data;  
+            document.querySelector("#numeris").value = taiso.numeris; 
+            document.querySelector("#atstumas").value = taiso.atstumas; 
+            document.querySelector("#laikas").value = taiso.laikas;  
+
+            document.querySelector("#add").style.display = 'none';
+        }
+
+
+        function saugoti(index) {
+            var taiso = auto[index]
+            taiso.data = document.querySelector('#data').value;
+            taiso.numeris = document.querySelector('#numeris').value;
+            taiso.atstumas = document.querySelector('#atstumas').value;
+            taiso.laikas = document.querySelector('#laikas').value;
+
+            document.querySelector('#data').value = '';
+            document.querySelector('#numeris').value = '';
+            document.querySelector('#atstumas').value = '';
+            document.querySelector('#laikas').value = '';
+
+            lentele();
+        }
+    </script>
+
+</body>
+
+</html>

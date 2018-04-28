@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    thead {
+        font-size: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <table>
+        <thead>
+            <div class="container">
+                <h2>Automobiliu lentele</h2>
+                <button onclick="naujas()" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Naujas</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Suveskite duomenis</h4>
+                            </div>
+                            <div class="modal-body">
+                                <label>Numeris:
+                                    <input id="numeris">
+                                </label>
+                                <br>
+                                <label>Atstumas:
+                                    <input id="atstumas">
+                                </label>
+                                <br>
+                                <label>Laikas:
+                                    <input id="laikas">
+                                </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" id="add" onclick="add()" data-dismiss="modal">Saugoti</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
+                                <button type="button" class="btn btn-default" id="save" onclick="save()" data-dismiss="modal">Saugoti</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <tr>
+                <td>
+                    <div>Numeris</div>
+                </td>
+                <td>
+                    <div>Atstumas</div>
+                </td>
+                <td>
+                    <div>Laikas</div>
+                </td>
+                <td>
+                    <div>Greitis</div>
+                </td>
+                <td>
+                    <div>Taisyti</div>
+                </td>
+            </tr>
+        </thead>
+        <tbody id="a">
+
+
+        </tbody>
+
+
+    </table>
+
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="mano" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Ar tikrai norite ištrinti?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="trinti2()" class="btn btn-default" data-dismiss="modal">Ištrinti</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var auto = [
+            { 'numeris': '', 'atstumas': '', 'laikas': '' },
+        ];
+
+function naujas() {
+    document.querySelector("#save").style.display = 'none';
+}
+
+        function add() {
+            auto.push({
+                'numeris': document.querySelector('#numeris').value,
+                'atstumas': document.querySelector('#atstumas').value,
+                'laikas': document.querySelector('#laikas').value
+            });
+
+            document.querySelector('#numeris').value = '';
+            document.querySelector('#atstumas').value = '';
+            document.querySelector('#laikas').value = '';
+
+            lentele();
+
+            
+
+        }
+
+        function lentele() {
+            var lentele = '';
+            auto.forEach((a, i) => {
+                lentele +=
+                    '<tr>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.atstumas + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                    '<td><button onclick="trinti1(' + i + ')">Trinti</button>' +
+                    '<button onclick="taisyti1(' + i + ')">Taisyti</button></td>'
+                '</tr>'
+
+            });
+
+            document.getElementById('a').innerHTML = lentele;
+        }
+
+        function trinti2(index) {
+            auto.splice(index, 1);
+            lentele();
+        }
+
+        function trinti1(index) {
+            $('#mano').modal('show');
+        }
+
+        function taisyti1(index){
+            $('#myModal').modal('show');
+            var taiso = auto[index]
+            document.querySelector("#numeris").value = taiso.numeris; 
+            document.querySelector("#atstumas").value = taiso.atstumas; 
+            document.querySelector("#laikas").value = taiso.laikas;  
+
+            document.querySelector("#add").style.display = 'none';
+            document.querySelector("#save").style.display = 'inline-block';
+           
+           save();
+        }
+
+         function save(index) {
+            var taiso = auto[index]
+            taiso.numeris = document.querySelector('#numeris').value;
+            taiso.atstumas = document.querySelector('#atstumas').value;
+            taiso.laikas = document.querySelector('#laikas').value;
+            
+            document.querySelector("#save").style.display = 'inline-block';
+            
+
+            document.querySelector('#numeris').value = '';
+            document.querySelector('#atstumas').value = '';
+            document.querySelector('#laikas').value = '';
+
+
+            lentele();
+            }
+            document.querySelector("#add").style.display = 'inline-block';
+
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

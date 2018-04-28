@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+body {
+  
+}
+    #kvadratas {
+        width: 60vmin;
+        height: 60vmin;
+        margin: auto;
+        background: gray;
+        position: relative;
+        font-size: 20px;
+        line-height: 60vmin;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+        position: relative;
+        transition-duration: 2s;
+    
+           }
+   
+  
+
+  
+</style>
+
+</head>
+<body>
+
+    <div id="kvadratas" onclick ="lialia()" ondblclick="dudu()" > 
+        <div   > Kvadratas</div>
+    </div>
+
+
+
+    <script>
+        var kvad = document.getElementById("kvadratas");
+        var round =  document.getElementById("round");
+        kvad.style.backgroundColor = "green";
+        kvad.innerHTML="Click me!";
+        
+
+function lialia() {   
+    kvad.style.borderRadius = "100%";
+    kvad.style.backgroundColor = "red";
+    kvad.style.transform = "rotate(360deg)";
+    kvad.innerHTML="Double click!";
+ 
+
+ }
+
+ function dudu() {         
+    kvad.style.backgroundColor = "green";
+    kvad.style.borderRadius = "0%";
+    kvad.style.transform = "rotate(-360deg)";
+    kvad.innerHTML="Click me!";
+       
+ }     
+
+    </script>
+
+</body>
+
+</html>

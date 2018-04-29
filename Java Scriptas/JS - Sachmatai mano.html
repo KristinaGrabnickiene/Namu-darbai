@@ -1,0 +1,242 @@
+   
+<!DOCTYPE html>
+<html>
+    <head>
+ <style>
+  			body {font-size: 1em}
+       #container {
+  						width: 80vmin;
+  						height: 80vmin;
+  						margin: auto;
+ 						min-width: 100px;
+  						min-height: 100px;
+  						padding:0px;
+						margin:0px;}
+        	
+      .lenta { border-collapse: collapse; width: 100%; height: 100%; border:1px solid black; background-color: #463028 }
+      
+      .row {   width: 100%;  height: 10%;  display: table-row; display: table; text-align: center;
+  line-height: 0;}
+      
+		.colum { width: 10%; height: 10%; 
+       		 text-align: center; display: table-cell; vertical-align: middle; color: white; font-size: 3vmin;}
+        
+		.light { background: #e4ce8c }
+      .dark { background: #775549 }
+      
+		.colum:first-child { transform: rotate(-90.0deg); } 
+		
+		.colum:last-child { transform: rotate(90.0deg); }
+		 
+      .row:last-child { transform: rotate(-180.0deg); }
+
+       #bokstasA1::after, #bokstasA2::after {  content: "\265C"; font-size: 5vmin; text-align: center; line-height: 0; color: black;}
+       #arklysA1::after, #arklysA2::after {  content: "\265E"; font-size: 5vmin; text-align: center; line-height: 0; color: black;}
+       #turasA1::after, #turasA2::after  {  content: "\265D"; font-size: 5vmin; text-align: center; line-height: 0; color: black;}
+       #karalieneA::after {  content: " \265B"; font-size: 5vmin; text-align: center; line-height: 0; color: black;}
+      #karaliusA::after {  content: " \265A"; font-size: 5vmin; text-align: center; line-height: 0; color: black;}
+       #eilinisA1::after, #eilinisA2::after, #eilinisA3::after, #eilinisA4::after, #eilinisA5::after, #eilinisA6::after, #eilinisA7::after, #eilinisA8::after { content: "\265F";  font-size: 5vmin; text-align: center;   line-height: 0; color: black;}
+      
+       #bokstasB1::after, #bokstasB2::after {  content: "\265C"; font-size: 5vmin; text-align: center;}
+       #arklysB1::after, #arklysB2::after {  content: "\265E"; font-size: 5vmin; text-align: center;}
+       #turasB1::after, #turasB2::after {  content: "\265D"; font-size: 5vmin; text-align: center;}
+       #karalieneB::after {  content: " \265B"; font-size: 5vmin; text-align: center; }
+      #karaliusB::after {  content: " \265A"; font-size: 5vmin; text-align: center; }
+       #eilinisB1::after, #eilinisB2::after, #eilinisB3::after, #eilinisB4::after, #eilinisB5::after, #eilinisB6::after, #eilinisB7::after, #eilinisB8::after { content: "\265F";  font-size: 5vmin; text-align: center; }
+      
+          
+    </style>
+    </head>
+      <body> 
+      	 <div id="container">
+      	   <div class="lenta">  
+               <div class="row">                    
+                   <div class="colum"></div><div class="colum">A
+                    </div><div class="colum">B
+                    </div><div class="colum">C
+                    </div><div class="colum">D
+                    </div><div class="colum">E
+                    </div><div class="colum">F
+                    </div><div class="colum">G
+                    </div><div class="colum">H
+                    </div><div class="colum"></div>
+               	 </div>
+                <div class="row">
+                    <div class="colum">1
+                    </div><div id="a1" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)" > <div id="bokstasA1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="b1" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)" ><div id="arklysA1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="c1" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="turasA1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="d1" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karalieneA" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="e1" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karaliusA" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="f1" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="turasA2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="g1" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklysA2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="h1" class="colum dark"ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstasA2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div class="colum">1</div>
+                </div>  
+                 <div class="row">
+                    <div class="colum">2
+                    </div><div id="a2" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA1"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="b2" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA2"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="c2" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA3"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="d2" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA4"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="e2" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA5"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="f2" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA6"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="g2" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA7"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="h2" class="colum light"ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisA8"draggable="true" ondragstart="drag(event)"></div>
+                    </div><div class="colum">2</div>
+                </div> 
+                 <div class="row">
+                    <div class="colum">3
+                    </div><div id="a3" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)" >
+                    </div><div id="b3" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="c3" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="d3" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="e3" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="f3" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="g3" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="h3" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div class="colum">3</div>
+                </div> 
+                 <div class="row">
+                    <div class="colum">4
+                    </div><div id="a4" class="colum dark"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="b4" class="colum light"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="c4" class="colum dark"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="d4" class="colum light"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="e4" class="colum dark"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="f4" class="colum light"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="g4" class="colum dark"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="h4" class="colum light"ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div class="colum">4</div>
+                </div>  <div class="row">
+                    <div class="colum">5
+                    </div><div id="a5" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="b5" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="c5" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="d5" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="e5" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="f5" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="g5" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="h5" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div class="colum">5</div>
+                </div>  <div class="row">
+                    <div class="colum">6
+                    </div><div id="a6" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="b6" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="c6" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="d6" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="e6" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="f6" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="g6" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div id="h6" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div><div class="colum">6</div>
+                </div>  <div class="row">
+                    <div class="colum">7
+                    </div><div id="a7" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="b7" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="c7" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB3" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="d7" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB4" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="e7" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB5" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="f7" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB6" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="g7" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB7" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="h7" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="eilinisB8" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div class="colum">7</div>
+                </div>  <div class="row">
+                    <div class="colum">8
+                    </div><div id="a8" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstasB1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="b8" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklysB1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="c8" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="turasB1" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="d8" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karaliusB" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="e8" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karalieneB" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="f8" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="turasB2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="g8" class="colum dark" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklysB2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div id="h8" class="colum light" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstasB2" draggable="true" ondragstart="drag(event)"></div>
+                    </div><div class="colum">8</div>
+                </div>  
+                <div class="row">
+                    <div class="colum">
+                    </div><div class="colum">A
+                    </div><div class="colum">B
+                    </div><div class="colum">C
+                    </div><div class="colum">D
+                    </div><div class="colum">E
+                    </div><div class="colum">F
+                    </div><div class="colum">G
+                    </div><div class="colum">H
+                    </div><div class="colum"></div>
+                </div> 
+                
+                </div>  
+                    
+                </div>
+                                        
+      </div> 
+<span id="steps"><div>Ėjimai:</div></span>
+      <script>
+
+        var id, parentId;
+
+        function testDiv(e, id) {
+    if (id.length > 0) {
+        return false;
+    }
+    else {
+        allowDrop(e);
+        return true;
+    }
+}
+
+
+        function drag(e) {
+
+            id = e.target.id; // atsiminti elemento id
+
+            parentId = e.target.parentElement.id;
+
+            e.dataTransfer.setData("text", id);
+
+        }
+    
+ 
+
+        function allowDrop(e) {
+
+            // jei tas pats arba jo tevas arba a2 tai neleidžiame "numesti"
+
+            if (e.target.id == id || e.target.id == parentId || 
+            e.target.id == 'bokstasA1' || e.target.id == 'bokstasA2' || e.target.id == 'arklysA1'|| e.target.id == 'arklysA2' || e.target.id == 'karalieneA'|| e.target.id == 'karaliusA' || e.target.id == 'turasA1' || e.target.id == 'turasA2' || 
+            e.target.id == 'eilinisA1' || e.target.id == 'eilinisA2'|| e.target.id == 'eilinisA3'||e.target.id == 'eilinisA4'|| e.target.id == 'eilinisA5'||e.target.id == 'eilinisA6'||e.target.id == 'eilinisA7'||e.target.id == 'eilinisA8'||
+            e.target.id == 'bokstasB1' || e.target.id == 'bokstasB2' || e.target.id == 'arklysB1'|| e.target.id == 'arklysB2' || e.target.id == 'karalieneB'|| e.target.id == 'karaliusB' || e.target.id == 'turasB1' || e.target.id == 'turasB2' || 
+            e.target.id == 'eilinisB1' || e.target.id == 'eilinisB2'|| e.target.id == 'eilinisB3'||e.target.id == 'eilinisB4'|| e.target.id == 'eilinisB5'||e.target.id == 'eilinisB6'||e.target.id == 'eilinisB7'||e.target.id == 'eilinisB8' ) return;
+                
+                
+            e.preventDefault();     // reikia kviesti šitą funkciją kad leisti "numesti" elementą
+
+        }   
+
+        function drop(e) {
+
+            e.preventDefault();     // uždraudžiam standartinį naršyklės veikimą su elementu - kaip kad mygtuko paspaudimas ir pan.
+
+            
+
+            var element = document.getElementById(id);  // randame elementą
+
+            e.target.appendChild(element);
+
+
+
+            var steps = document.getElementById('steps'); 
+
+            var step = document.createElement("div");
+
+            step.innerHTML = parentId + '-' + e.target.id;
+
+            steps.appendChild(step);
+
+        }
+
+    </script>
+
+    </body>
+</html>

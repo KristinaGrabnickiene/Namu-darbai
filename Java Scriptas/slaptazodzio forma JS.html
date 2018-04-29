@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<style>
+    .container {
+    width: 400px;
+    height: 250px;
+    border: 2px solid grey;
+    margin: auto;
+    padding: 50px 50px;
+    font-size: 17px;
+    line-height: 9.5px;
+    background-color: lightgrey;
+}
+</style>
+
+<body>
+    <script type="text/javascript">
+
+        function checkPassword(str) {
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            return re.test(str);
+        }
+
+        function checkForm(form) {
+            if (form.username.value == "") {
+                alert("Klaida: 'Vardas' langelis paliktas tučias!");
+                form.username.focus();
+                return false;
+            }
+            if (form.pwd1.value == "") {
+                alert("Klaida: 'Slaptažodis' langelis paliktas tučias!");
+                form.username.focus();
+                return false;
+            }
+            if (form.pwd2.value == "") {
+                alert("Klaida: 'Pakartotį slaptažodį' langelis paliktas tuščias!");
+                form.username.focus();
+                return false;
+            }
+            re = /^\w+$/;
+            if (!re.test(form.username.value)) {
+                alert("Klaida: Naudokite raides, didžiąsias raides ir skaičius! ");
+                form.username.focus();
+                return false;
+            }
+
+            if (form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+
+                if (form.pwd1.value.length < 6) {
+                    alert("Klaida: Slaptažodį turi sudaryti bent 6 simboliai!");
+                    form.pwd1.focus();
+                    return false;
+                }
+                re = /[0-9]/;
+                if (!re.test(form.pwd1.value)) {
+                    alert("Klaida: Slaptažodyje naudokite bent 1 skaičių nuo (0-9)!");
+                    form.pwd1.focus();
+                    return false;
+                }
+                if (!checkPassword(form.pwd1.value)) {
+                    alert("Sveikiname, Jūsų slaptažodis sutampa!");
+                    form.pwd1.focus();
+                    return false;
+                }
+
+            } else {
+                alert("Klaida :Jūsų slaptažodis nesutampa su pakartotu slaptažodžiu ");
+                form.pwd1.focus();
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+
+<div class="container">
+
+    <h2> Slaptažodžio forma </h2>
+    <form method="POST" action="..." onsubmit="return checkForm(this);">
+        <p>Vardas:
+            <input type="text" name="username">
+        </p>
+        <p>Slaptažodis:
+            <input type="password" name="pwd1">
+        </p>
+        <p>Pakartoti slaptažodį:
+            <input type="password" name="pwd2">
+        </p>
+        <p>
+            <button type="submit">Saugoti </button>
+        </p>
+    </form>
+</div>
+<div>
+    <ul>
+        <li>Visi laukeliai turi būti užpildyti.</li>
+        <li>Vardas - Naudokite tik raides, didžiąsias raides ir skaičius!</li>
+        <li>Slaptažodis - Turi susidaryti iš 6 simbolių</li>
+        <li>Slaptažodis - Turi būti panaudotas bent 1 skaičius nuo (0-9)</li>
+        <li>Abu slaptažodžiai turi sutapti</li>
+       
+        
+
+    </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <title>jQuery - Dimensions</title>
+
+    <meta charset="UTF-8">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+
+    <input id="miestas" placeholder="Miestas" name="miestas" value="Kaunas">
+
+    <input placeholder="Gatvė" name="gatve">
+
+    <input placeholder="Numeris" name="numeris">
+
+    <button onclick="getPostIndex()">Pašto indeksas</button>
+
+
+
+    <p></p>
+
+    
+
+    <script>
+
+        function getPostIndex() {
+
+            var miestas = $('#miestas').val();
+
+            var gatve = $('input[name="gatve"]').val();
+
+            var numeris = $('input[name="numeris"]').val();
+
+
+
+            $.get('https://postit.lt/data', {'address': gatve + ' ' + numeris +', ' + miestas}, function(resp) {
+
+                console.log(resp);
+
+                $('p').html('Pašto indeksas: ' + resp.data[0].post_code);   
+
+            });
+
+
+
+             $.get('https://postit.lt/data', 
+
+                {'address': gatve + ' ' + numeris +', ' + miestas}
+
+             ).done(function(resp) {
+
+               console.log(resp);
+
+                 if (resp.data && resp.data.length > 0) {
+
+                    $('p').html('Pašto indeksas: ' + resp.data[0].post_code);
+
+                } else {
+
+                  $('p').html('Blogas adresas');
+                  window.alert("Blogas adresas");
+                 }
+
+            }).error(function() {
+
+                $('p').html('Serverio klaida');
+                window.alert("Serverio klaida");
+             });
+
+        }
+
+    </script>
+
+</body>
+
+
+
+</html>

@@ -159,7 +159,7 @@ function naujas() {
                     '<td>' + a.laikas + '</td>' +
                     '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
                     '<td><button onclick="trinti1(' + i + ')">Trinti</button>' +
-                    '<button onclick="taisyti1(' + i + ')">Taisyti</button></td>'
+                    '<button id="jamam" onclick="taisyti1(' + i + ')">Taisyti</button></td>'
                 '</tr>'
 
             });
@@ -186,7 +186,7 @@ function naujas() {
             document.querySelector("#add").style.display = 'none';
             document.querySelector("#save").style.display = 'inline-block';
            
-           save();
+         
         }
 
          function save(index) {
@@ -201,7 +201,6 @@ function naujas() {
             document.querySelector('#numeris').value = '';
             document.querySelector('#atstumas').value = '';
             document.querySelector('#laikas').value = '';
-
 
             lentele();
             }

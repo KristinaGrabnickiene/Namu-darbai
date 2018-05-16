@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    #red,
+    #blue,
+    #green {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+
+    #red {
+        background-color: red;
+        display: inline-block;
+        margin: auto;
+    }
+
+    #blue {
+        background-color: blue;
+        display: inline-block;
+    }
+
+    #green {
+        background-color: green;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <h2>Pavasaris</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam. Maecenas vel
+        nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.</p>
+
+    <button id="a">Slepti</button>
+    <button id="b">Show</button>
+    <br>
+
+
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#a").click(function () {
+                $("p").hide();
+            });
+            $("#b").click(function () {
+                $("p").show();
+            });
+        });
+
+         $(document).ready(function () {
+            $("#red").click(function () {
+                $("#blue, #green").hide(2000);
+            });
+            $("#red").dblclick(function () {
+                $("#blue , #green").show(1000);
+            });
+        });
+
+         $(document).ready(function () {
+            $("#green").click(function () {
+                $("#red, #blue").hide(2000);
+            });
+            $("#green").dblclick(function () {
+                $("#blue , #red").show(1000);
+            });
+        });
+
+        $(document).ready(function () {
+            $("#blue").click(function () {
+                $("#red, #green").hide(2000);
+            });
+            $("#blue").dblclick(function () {
+                $("#green , #red").show(1000);
+            });
+            $("#b").click(function () {
+                $("#green , #blue, #red").show(1000);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
